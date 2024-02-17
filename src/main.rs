@@ -3,14 +3,14 @@
 use std::time::Instant;
 mod big_o_examples;
 mod exercises;
-use big_o_examples::o_of_1::log_first_two_boxes;
-// use big_o_examples::o_of_n::find_nemo;
+use big_o_examples::o_of_1::*;
+use big_o_examples::o_of_n::*;
 
 fn main() {
     // let nemo = vec!["nemo"];
-    // let everyone = vec![
-    //     "dory", "bruce", "marlin", "nemo", "gill", "bloat", "nigel", "squirt", "darla", "hank",
-    // ];
+    let everyone = vec![
+        "dory", "bruce", "marlin", "nemo", "gill", "bloat", "nigel", "squirt", "darla", "hank",
+    ];
 
     // let large = (0..100).map(|_| "nemo").collect::<Vec<&str>>();
     // find_nemo_measure_time(large);
@@ -18,6 +18,8 @@ fn main() {
 
     let boxes = vec![0, 1, 2, 3, 4, 5];
     log_first_two_boxes(boxes);
+
+    find_nemo_break(everyone)
 }
 
 /// We initially think efficiency is about speed, but it's really about scale
